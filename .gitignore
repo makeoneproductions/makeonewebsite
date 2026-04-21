@@ -1,0 +1,16 @@
+# Large media files
+*.mp4
+*.mov
+*.avi
+
+# Temp screenshots / reference files
+Screenshot*.png
+makeonepro.com_*.png
+www.ofskinandsouls*.png
+
+# Claude / project internals
+CLAUDE.md
+
+# OS
+.DS_Store
+Thumbs.db

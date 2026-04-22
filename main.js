@@ -55,14 +55,3 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-document.querySelector('.contact-form')?.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-btn');
-    btn.textContent = 'Message Sent';
-    btn.style.background = 'var(--fg-muted)';
-    setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.background = '';
-        e.target.reset();
-    }, 3000);
-});

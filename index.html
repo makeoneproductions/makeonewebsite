@@ -241,14 +241,31 @@
         <div class="container">
             <h3 class="section-label">GET IN TOUCH</h3>
             <p class="contact-sub">Have a project in mind? We'd love to hear about it.</p>
-            <form class="contact-form">
+            <div data-fs-success class="fs-success">Message sent — we'll be in touch soon.</div>
+            <div data-fs-error class="fs-error"></div>
+
+            <form id="contact-form" class="contact-form">
+                <input type="hidden" name="_subject" value="New enquiry from Make One Productions website">
                 <div class="form-row">
-                    <input type="text" placeholder="Your name" class="form-input">
-                    <input type="email" placeholder="your@email.com" class="form-input">
+                    <div class="form-field">
+                        <input type="text" name="name" placeholder="Your name" class="form-input" data-fs-field>
+                        <span data-fs-error="name" class="fs-field-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <input type="email" name="email" placeholder="your@email.com" class="form-input" data-fs-field>
+                        <span data-fs-error="email" class="fs-field-error"></span>
+                    </div>
                 </div>
-                <textarea placeholder="Tell us about your project..." class="form-textarea" rows="4"></textarea>
-                <button type="submit" class="form-btn">Send Message</button>
+                <textarea name="message" placeholder="Tell us about your project..." class="form-textarea" rows="4" data-fs-field></textarea>
+                <span data-fs-error="message" class="fs-field-error"></span>
+                <button type="submit" class="form-btn" data-fs-submit-btn>Send Message</button>
             </form>
+
+            <script>
+                window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+                formspree('initForm', { formElement: '#contact-form', formId: 'mblzydry' });
+            </script>
+            <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
             <div class="contact-direct">
                 <a href="mailto:contact@makeonepro.com" class="contact-email">contact@makeonepro.com</a>
                 <span class="contact-sep">·</span>

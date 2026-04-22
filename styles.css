@@ -1365,6 +1365,59 @@ a {
 }
 
 /* ============================================================
+   FORMSPREE STATES
+   ============================================================ */
+
+.fs-success,
+.fs-error {
+    display: none;
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.fs-success:not(:empty),
+[data-fs-success]:not([hidden]) {
+    display: block;
+    border: 1px solid var(--accent-dim);
+    color: var(--fg-muted);
+    background: rgba(207, 42, 42, 0.06);
+}
+
+.fs-error:not(:empty) {
+    display: block;
+    border: 1px solid var(--border-light);
+    color: #e07070;
+    background: rgba(207, 42, 42, 0.04);
+}
+
+.fs-field-error {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: #e07070;
+    margin-top: 0.35rem;
+    min-height: 1em;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+[data-fs-submit-btn]:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    letter-spacing: 0.28em;
+}
+
+/* ============================================================
    CONTACT DIRECT
    ============================================================ */
 

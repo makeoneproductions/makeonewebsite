@@ -1405,15 +1405,8 @@ a {
    RESPONSIVE
    ============================================================ */
 
+/* ── 1200px ── */
 @media (max-width: 1200px) {
-    .productions-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .productions-grid .prod-card:last-child {
-        display: none;
-    }
-
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0;
@@ -1435,22 +1428,37 @@ a {
     }
 }
 
+/* ── 960px ── */
 @media (max-width: 960px) {
     .nav-left {
         display: none;
     }
 
-    .productions-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .container {
+        padding: 0 1.75rem;
     }
 
-    .productions-grid .prod-card:last-child {
-        display: block;
+    .title-band {
+        padding: 5rem 0 4rem;
+    }
+
+    .featured-section,
+    .featured-film-section,
+    .work-section {
+        padding: 4rem 0;
+    }
+
+    .spotlight-section {
+        padding: 5rem 0;
     }
 
     .spotlight-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .mission-section {
+        padding: 6rem 0;
     }
 
     .footer-top {
@@ -1459,34 +1467,157 @@ a {
     }
 }
 
-@media (max-width: 640px) {
-    .hero-frame {
-        padding: 2rem 1.75rem;
+/* ── 768px ── */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
     }
 
-    .productions-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-container {
+        padding: 0 1.25rem;
+    }
+
+    /* Hide "Services" text link in nav-right — keep only the CTA button */
+    .nav-right .nav-link {
+        display: none;
+    }
+
+    .hero-frame {
+        padding: 2.5rem 2rem;
+    }
+
+    .title-band {
+        padding: 4rem 0 3rem;
+    }
+
+    .featured-section,
+    .featured-film-section,
+    .work-section {
+        padding: 3.5rem 0;
+    }
+
+    .spotlight-section {
+        padding: 4rem 0;
+    }
+
+    .mission-section {
+        padding: 5rem 0;
+    }
+
+    .contact-section {
+        padding: 4.5rem 0;
+    }
+
+    .footer-top {
+        gap: 2.5rem;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ── 640px ── */
+@media (max-width: 640px) {
+    .hero-frame {
+        padding: 2rem 1.5rem;
     }
 
     .form-row {
         grid-template-columns: 1fr;
     }
 
+    /* Keep the arrow link visible; only hide status badge and year */
     .work-item {
-        grid-template-columns: 44px 1fr;
+        grid-template-columns: 44px 1fr auto;
+        gap: 1rem;
     }
 
-    .work-meta {
+    .work-status,
+    .work-year {
         display: none;
     }
 
-    .footer-links {
-        grid-template-columns: 1fr 1fr;
+    .work-meta {
+        gap: 0;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+    }
+}
+
+/* ── 480px ── */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    /* Hide logo text — show only the M icon on very small screens */
+    .logo-text {
+        display: none;
+    }
+
+    .hero-frame {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .hero-content {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .title-band {
+        padding: 3rem 0 2.5rem;
+    }
+
+    .featured-section,
+    .featured-film-section,
+    .work-section {
+        padding: 3rem 0;
+    }
+
+    .spotlight-section {
+        padding: 3rem 0;
+    }
+
+    .mission-section {
+        padding: 4rem 0;
+    }
+
+    .contact-section {
+        padding: 3.5rem 0;
+    }
+
+    .glow-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .site-footer {
+        padding: 4rem 0 2rem;
+    }
+
+    .work-item {
+        gap: 0.75rem;
+    }
+
+    .work-info h4 {
+        font-size: 1rem;
+    }
+
+    .spotlight-meta {
+        gap: 1.5rem;
     }
 }
